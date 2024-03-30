@@ -22,7 +22,7 @@ body {
 header {
     background-color: #ffffff;
     padding: 0 1rem;
-    position:fixed;
+    position: fixed;
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
@@ -40,16 +40,19 @@ h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #252525;   
+    color: #252525;
 }
+
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
-    list-style-type: none;   
+    list-style-type: none;
 }
-#menu > li {
+
+#menu>li {
     margin-bottom: 1em;
 }
+
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
@@ -65,10 +68,12 @@ nav {
     display: none;
     top: 100%;
 }
+
 /* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
+
 #nav-toggle {
     display: none;
 }
@@ -76,6 +81,7 @@ nav {
 .nav-toggle-label {
     font-size: 2rem;
 }
+
 /* Main content */
 main {
     background-color: lightblue;
@@ -87,4 +93,28 @@ main {
 /* Footer */
 footer {
     background-color: orange;
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+#menu > li {
+    padding-left: 1rem;
+}
+
+.nav-toggle-label {
+    display: none;
+}
 }
